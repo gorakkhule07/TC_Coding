@@ -1,0 +1,94 @@
+<form class="container card-body border mt-5 bg-light">
+    
+    <div class="mb-5 font-weight-bold">PATIENT REGISTRATION</div>
+
+    <small class="form-text text-success">{{sucessmessage}}</small><br/>
+    <small *ngFor="let message of userMessages" class="form-text text-danger">{{message}}</small><br/>
+    <div class="form-group col-12 row">
+        <div class="col-6">
+            <label>Name</label>
+            <input [(ngModel)]="Model.patient.name" #Name="ngModel" name="name" type="text" class="form-control"
+                placeholder="Enter name" />
+            <small id="emailHelp" *ngIf="!Model.patient.name" class="form-text text-danger">Please enter name.</small>
+        </div>
+        <div class="col-6">
+            <label>Surname</label>
+            <input [(ngModel)]="Model.patient.surName" #surName="ngModel" name="surName" type="text" class="form-control"
+                placeholder="Enter surname" />
+            <small *ngIf="!Model.patient.surName" class="form-text text-danger">Please enter surname.</small>
+        </div>
+    </div>
+    <div class="form-group col-12 row">
+        <div class="col-6">
+            <label>Birth Date</label>
+            <input [(ngModel)]="this.Model.patient.dob" #dob="ngModel" name="dob" type="datetime-local" class="form-control"
+                placeholder="Enter dob" />
+            <small *ngIf="!Model.patient.dob" class="form-text text-danger">Please enter birth date.</small>
+        </div>
+        <div class="col-6">
+            <label>Gender</label>
+
+            <select id="gender" class="form-control" style=" border: 1px solid #666ee8" [(ngModel)]="Model.patient.gender"
+                name="gender" #gender="ngModel">
+                <option value="0"></option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+
+            <small *ngIf="!Model.patient.gender" class="form-text text-danger">Please select gender.</small>
+        </div>
+    </div>
+    <div class="form-group col-12 row">
+        <div class="col-6">
+            <label>State</label>
+            <select id="state" class="form-control" style=" border: 1px solid #666ee8" 
+            [(ngModel)]="Model.stateid" (change)="GetCities()"
+                name="stateid" #stateid="ngModel">
+                <option value="0"></option>
+                <option *ngFor="let state of Model.states" value="{{state.id}}">{{state.name}}</option>
+            </select>
+            <small *ngIf="!Model.stateid" class="form-text text-danger">Please select state.</small>
+        </div>
+        <div class="col-6">
+            <label>City</label>
+            <select id="city" class="form-control" style=" border: 1px solid #666ee8" [(ngModel)]="Model.patient.cityId"
+            name="cityId" #cityId="ngModel">
+            <option value="0"></option>
+            <option *ngFor="let city of Model.cities" value="{{city.id}}">{{city.name}}</option>
+        </select>
+            <small *ngIf="!Model.patient.cityId" class="form-text text-danger">Please select city.</small>
+        </div>
+    </div>
+
+    <div class="row">
+         <button type="button" (click)="SavePatient()" class="btn btn-primary ml-4 mr-5">{{operation}} </button>
+        <button type="button" (click)="Cancel()" class="btn btn-primary ml-4">Cancel</button>
+    </div>
+</form>
+<form class="container card-body border mt-5 bg-light">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Surname</th>
+                <th scope="col">DOB</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of PatientList">
+                <th scope="row">{{item.name}}</th>
+                <td>{{item.surName}}</td>
+                <td>{{item.dob}}</td>
+                <td>{{item.gender}}</td>
+                <td>
+                    <a (click)="FetchRecord(item.id)" class="glyphicon glyphicon-pencil">
+                        Fetch
+                    </a>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</form>
