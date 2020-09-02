@@ -1,0 +1,15 @@
+C:\Users\User\source\repos\TestWebApi\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\User\source\repos\TestWebApi\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\User\source\repos\TestWebApi\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\User\source\repos\TestWebApi\bin\Debug\netcoreapp2.0\TestWebApi.deps.json
+C:\Users\User\source\repos\TestWebApi\bin\Debug\netcoreapp2.0\TestWebApi.runtimeconfig.json
+C:\Users\User\source\repos\TestWebApi\bin\Debug\netcoreapp2.0\TestWebApi.runtimeconfig.dev.json
+C:\Users\User\source\repos\TestWebApi\bin\Debug\netcoreapp2.0\TestWebApi.dll
+C:\Users\User\source\repos\TestWebApi\obj\Debug\netcoreapp2.0\TestWebApi.csprojAssemblyReference.cache
+C:\Users\User\source\repos\TestWebApi\obj\Debug\netcoreapp2.0\TestWebApi.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\TestWebApi\obj\Debug\netcoreapp2.0\TestWebApi.AssemblyInfo.cs
+C:\Users\User\source\repos\TestWebApi\bin\Debug\netcoreapp2.0\TestWebApi.pdb
+C:\Users\User\source\repos\TestWebApi\obj\Debug\netcoreapp2.0\TestWebApi.dll
+C:\Users\User\source\repos\TestWebApi\obj\Debug\netcoreapp2.0\TestWebApi.pdb
+C:\Users\User\source\repos\TestWebApi\bin\Debug\netcoreapp2.0\iMedOneDB.DLL
+C:\Users\User\source\repos\TestWebApi\obj\Debug\netcoreapp2.0\TestWebApi.csproj.CopyComplete
